@@ -3,23 +3,54 @@
 <meta charset="utf-8"/>
 <head>
     <title>This is Library Project</title>
-    <link rel="stylesheet" href="style/page.css">
-    <script src="scripts/libpro.js"></script>
+    <link type="text/css" rel="stylesheet" href="Style/Board.css">
+
 </head>
 
 <body>
 
 <h2>Tic Tac Toe</h2>
-<p id =  "demo">A two player game demostrating .</p>
+<p id="demo">A two players game demostrating game theory.</p>
 
-<form>
-<label for="title">Palyer One:</label>
-<input type="text" id="player1" name="player1"><br><br>
-<label for="author">Palyer Two:</label>
-<input type="text" id="player2" name="player2"><br><br>
-<button class = "button" type="button" onclick="addBookToLibrary()">Start</button>
-</form>
-<div id ='Board'></div>
+<div id="container">
+<div class ="column" id= "players">
+  <form>
+    <input type="radio" id="single" name ="mode">
+    <label for="Single">Single Player</label>
+    <input type="radio" id="double" name ="mode">
+    <label for="not_read">Two Players</label><br><br>
+    <label for="player1">P1 Name:</label>
+    <input type="text" id="player1" name="player1" value = "John"><br><br>
+    <label for="player1">P2 Name:</label>
+    <input type="text" id="player2" name="player2" value = "Bob"><br><br>
+    <button class = "button" type="button" onclick="start()">Start</button>
+  </form>
+</div>
 
+<div class= "column">
+  <div id ='Board_Status'> </div>
+  <div id ='Board'>
+    <div id= 'top_row'>
+      <div class = 'top' id='1' onclick="play(this.id)"></div>
+      <div class = 'top' id='2' onclick="play(this.id)"></div>
+      <div class = 'top' id='3' onclick="play(this.id)"></div>
+    </div>
+
+    <div id= 'middle_row'>
+      <div class = 'middle' id='4' onclick="play(this.id)"></div>
+      <div class = 'middle' id='5' onclick="play(this.id)"></div>
+      <div class = 'middle' id='6' onclick="play(this.id)"></div>
+    </div>
+
+    <div id= 'bottom_row'>
+      <div class = 'bottom' id='7' onclick="play(this.id)"></div>
+      <div class = 'bottom' id='8' onclick="play(this.id)"></div>
+      <div class = 'bottom' id='9' onclick="play(this.id)"></div>
+    </div>
+  </div>
+</div>
+</div>
+
+<script type="text/javascript" src="Scripts/Board.js"></script>
 </body>
 </html>
